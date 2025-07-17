@@ -8,7 +8,8 @@ from google.oauth2.service_account import Credentials
 
 def get_gsheet_client():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    info = json.loads(st.secrets["SERVICE_ACCOUNT_JSON"])  # <-- PATCHED HERE
+    # IMPORTANT: SERVICE_ACCOUNT_JSON must have escaped newlines (\n), not actual line breaks!
+    info = json.loads(st.secrets["SERVICE_ACCOUNT_JSON"])
     creds = Credentials.from_service_account_info(info, scopes=scope)
     return gspread.authorize(creds)
 
