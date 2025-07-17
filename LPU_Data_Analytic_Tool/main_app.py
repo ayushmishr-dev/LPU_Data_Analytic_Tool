@@ -8,7 +8,7 @@ from datetime import datetime
 # --- Custom Styles & Logo ---
 st.markdown(
     """
-    <img src="https://upload.wikimedia.org/wikipedia/en/7/7c/Lovely_Professional_University_logo.png"
+    <img src="https://gallerypng.com/wp-content/uploads/2024/08/lpu-logo-png-image-750x275.png"
          width="80" style="float:left; margin-right:18px; margin-bottom:6px;">
     """,
     unsafe_allow_html=True,
