@@ -5,7 +5,8 @@ from google.oauth2.service_account import Credentials
 
 def get_gsheet_client():
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = Credentials.from_service_account_info(st.secrets["SERVICE_ACCOUNT_JSON"], scopes=scope)
+    info = json.loads(st.secrets["SERVICE_ACCOUNT_JSON"])  
+    creds = Credentials.from_service_account_info(info, scopes=scope)
     return gspread.authorize(creds)
 
 def run_ig_classification():
