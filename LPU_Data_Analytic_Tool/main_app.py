@@ -9,7 +9,7 @@ from datetime import datetime
 st.markdown(
     """
     <img src="https://gallerypng.com/wp-content/uploads/2024/08/lpu-logo-png-image-750x275.png"
-         width="120" style="float:left; margin-right:18px; margin-bottom:6px;">
+         width="150" style="float:left; margin-right:18px; margin-bottom:6px;">
     """,
     unsafe_allow_html=True,
 )
