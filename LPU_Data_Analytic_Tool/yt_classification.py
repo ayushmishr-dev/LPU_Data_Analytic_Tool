@@ -7,8 +7,10 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 def get_gsheet_client():
+    import json
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-    creds = Credentials.from_service_account_info(st.secrets["SERVICE_ACCOUNT_JSON"], scopes=scope)
+    info = json.loads(st.secrets["SERVICE_ACCOUNT_JSON"]) 
+    creds = Credentials.from_service_account_info(info, scopes=scope)
     return gspread.authorize(creds)
 
 def fetch_video_durations(video_ids, youtube):
