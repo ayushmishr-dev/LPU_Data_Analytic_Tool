@@ -23,4 +23,4 @@ with col2:
     if st.button("Run IG Discovery"):
         run_ig_discovery(days_back=ig_days_back)
     if st.button("Run IG Classification"):
-         run_ig_classification(days_back=ig_days_back)  # Uncomment if you make ig_classification.py modular
+         run_ig_classification(days_back=ig_days_back)  
