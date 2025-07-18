@@ -59,7 +59,7 @@ with tabs[0]:
     st.markdown('<div class="bluebar">Last Classification: Never</div>', unsafe_allow_html=True)
 
     yt_task = st.radio("Task", options=["Discovery", "Classification"], horizontal=True, key="yt_task")
-    yt_days_back = st.number_input("How many days back?", min_value=1, max_value=365, value=7, step=1, key="yt_days")
+    yt_days_back = st.number_input("How many days back?", min_value=1, max_value=365, value=1, step=1, key="yt_days")
 
     if yt_task == "Discovery":
         if st.button("Run YT Discovery"):
@@ -77,7 +77,7 @@ with tabs[1]:
     st.markdown('<div class="bluebar">Last Classification: Never</div>', unsafe_allow_html=True)
 
     ig_task = st.radio("Task", options=["Discovery", "Classification"], horizontal=True, key="ig_task")
-    ig_days_back = st.number_input("How many days back?", min_value=1, max_value=365, value=7, step=1, key="ig_days")
+    ig_days_back = st.number_input("How many days back?", min_value=1, max_value=365, value=1, step=1, key="ig_days")
 
     if ig_task == "Discovery":
         if st.button("Run IG Discovery"):
