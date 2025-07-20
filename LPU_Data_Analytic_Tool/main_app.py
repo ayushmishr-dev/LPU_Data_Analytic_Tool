@@ -67,7 +67,7 @@ with tabs[0]:
             st.success("YouTube Discovery complete! 🚀\n\n**Before running Classification, open your Google Sheet and fill in the 'Assigned Type' column for the new videos.**")
     else:
         st.warning("Please ensure the 'Assigned Type' column is filled in the 'Discovered Videos' sheet before running Classification. See the guide below.")
-        if st.button("Run YT Classification"):
+        if st.button("Run"):
             run_yt_classification(days_back=yt_days_back)
 
 # --- Instagram Tab ---
